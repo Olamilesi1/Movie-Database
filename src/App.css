@@ -1,10 +1,9 @@
 .movies {
-  border: .1rem solid black;
+  border: 0.1rem solid black;
   display: flex;
-  /* flex-wrap: wrap; */
   gap: 1rem;
 }
-.movie{
-  border: .1rem solid black;
+.movie {
+  border: 0.1rem solid black;
   border-radius: 1rem;
 }
