@@ -1,7 +1,7 @@
 .movies {
   border: .1rem solid black;
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-wrap: wrap;
   gap: 1rem;
 }
 .movie{
