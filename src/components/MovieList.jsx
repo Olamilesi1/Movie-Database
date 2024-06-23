@@ -6,7 +6,7 @@ function MovieList() {
 
     return (
         <>
-            <div className="movies">
+            <div className="movies bg2">
                 {movies.map((movie) => (
                     <div key={movie.id} className="movie" onClick={() => handleMovieClick(movie)}>
                         <img src={`${imgUrl}${movie.poster_path}`} alt={movie.title} />
@@ -22,14 +22,16 @@ function MovieList() {
             </div>
 
             <h1>Favourite</h1>
+            <div className="movies bg">
             {favorite.map(movie => (
-                <div key={movie.id}>
+                <div key={movie.id} className="movie">
                     <img src={`${imgUrl}${movie.poster_path}`} alt={movie.title} onClick={() => handleMovieClick(movie)} />
                     <p>Title: {movie.title}</p>
                     <p>Overview: {movie.overview}</p>
                     <p>Vote Average: {movie.vote_average}</p>
                 </div>
             ))}
+            </div>
         </>
     );
 }
