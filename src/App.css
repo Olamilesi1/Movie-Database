@@ -1,10 +1,174 @@
 .movies {
-  border: .1rem solid black;
-  display: flex;
-  /* flex-wrap: wrap; */
-  gap: 1rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  padding: 2rem;
 }
 .movie{
-  border: .1rem solid black;
+  box-shadow: 0 0 4px 0;
   border-radius: 1rem;
+  padding: 10px;
+
+}
+
+.title{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.details, .detail{
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.details{
+  margin: 0 auto;
+  width: 50%;
+}
+
+.details img{
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+  border-radius: 20px;
+  box-shadow: 0 0 10px 0;
+}
+
+.movies img{
+  width: 100%;
+  border-radius: 1rem;
+}
+
+h1{
+  text-align: center;
+}
+
+.bg{
+  background-color: rgba(126, 126, 126, 0.418);
+}
+
+.bg2{
+  background-color: rgba(255, 255, 0, 0.258);
+}
+
+.title-search{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  gap: 20px;
+}
+
+.search {
+  display: inline-block;
+  position: relative;
+}
+
+.search input[type="text"] {
+  width: 250px;
+  padding: 10px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.633);
+}
+
+.search button[type="submit"] {
+  background-color: #4e99e9;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 10px 20px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.779);
+  position: absolute;
+  top: 0;
+  right: 0;
+  transition: .9s ease;
+}
+
+.search button[type="submit"]:hover {
+  transform: scale(1.1);
+  color: rgb(255, 255, 255);
+  background-color: blue;
+}
+
+
+
+.cta {
+  position: relative;
+  margin: auto;
+  padding: 12px 18px;
+  transition: all 0.2s ease;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.cta:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  border-radius: 50px;
+  background: #b1dae7;
+  width: 45px;
+  height: 45px;
+  transition: all 0.3s ease;
+}
+
+.cta span {
+  position: relative;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: #234567;
+}
+
+.cta svg {
+  position: relative;
+  top: 0;
+  margin-left: 10px;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke: #234567;
+  stroke-width: 2;
+  transform: translateX(-5px);
+  transition: all 0.3s ease;
+}
+
+.cta:hover:before {
+  width: 100%;
+  background: #b1dae7;
+}
+
+.cta:hover svg {
+  transform: translateX(0);
+}
+
+.cta:active {
+  transform: scale(0.95);
+}
+
+
+
+
+
+@media screen and (max-width: 1000px) {
+  .movies{
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+}
+@media screen and (max-width: 500px) {
+  .movies{
+    width: 100%;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
 }
