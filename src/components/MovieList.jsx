@@ -37,7 +37,6 @@
 // export default MovieList;
 
 
-import React from 'react';
 
 const MovieList = ({ movies, imgUrl, onMovieClick, favorite, onFavoriteClick }) => {
   return (
