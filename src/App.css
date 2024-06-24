@@ -64,6 +64,7 @@ button:hover {
   justify-content: space-around;
   gap: 1rem;
   overflow: scroll;
+  padding-bottom: 1rem;
 }
 
 .movies::-webkit-scrollbar {
@@ -99,6 +100,7 @@ h1 {
   justify-content: space-around;
   gap: 1rem;
   overflow: scroll;
+  padding-bottom: 1rem;
 }
 
 .favorite::-webkit-scrollbar {

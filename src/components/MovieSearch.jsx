@@ -43,7 +43,7 @@ import MovieDetail from './MovieDetail';
 import SearchForm from './SearchForm';
 
 function MovieSearch() {
-  const { genres, moviesByGenre, movieDetail, handleMovieClick, handleBackToList, imgUrl, favorite, handleFavoriteClick, movies, searchQuery } = useContext(MovieContext);
+  const { genres, moviesByGenre, movieDetail, handleMovieClick, handleBackToList, imgUrl, favorite, handleFavoriteClick, movies, searchQuery} = useContext(MovieContext);
 
   return (
     <div className='movie-genre'>
