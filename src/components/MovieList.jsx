@@ -35,3 +35,27 @@ function MovieList() {
 }
 
 export default MovieList;
+
+
+
+// const MovieList = ({ movies, imgUrl, onMovieClick, favorite, onFavoriteClick }) => {
+//   return (
+//     <div className="movies">
+//       {movies.map((movie) => (
+//         <div key={movie.id} className="movie" onClick={() => onMovieClick(movie)}>
+//           <img src={`${imgUrl}${movie.poster_path}`} alt={movie.title} />
+//           <p>Title: {movie.title}</p>
+//           <p>Vote Average: {movie.vote_average}</p>
+//           <span
+//             className="material-symbols-outlined"
+//             onClick={(e) => { e.stopPropagation(); onFavoriteClick(movie); }}
+//           >
+//             {favorite.some((fav) => fav.id === movie.id) ? 'favorite' : 'favorite_border'}
+//           </span>
+//         </div>
+//       ))}
+//     </div>
+//   );
+// };
+
+// export default MovieList;
