@@ -279,4 +279,8 @@ button:hover {
     display: flex;
     justify-content: center;
   }
+
+  .back{
+    width: 100%;
+  }
 }
