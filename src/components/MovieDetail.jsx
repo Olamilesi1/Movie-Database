@@ -21,10 +21,16 @@
 // export default MovieDetail;
 
 import React, { useContext } from "react";
+import { useState } from "react";
 import { MovieContext } from "./MovieContext";
 
 function MovieDetail() {
     const { movieDetail, imgUrl, handleFavoriteClick, favorite } = useContext(MovieContext);
+    const [red, setRed] = useState(false);
+
+    const handleRed = () => {
+      setRed(!red)
+    }
 
     return (
         <div key={movieDetail.id} className="movie-detail">
@@ -34,9 +40,13 @@ function MovieDetail() {
             <p>Release Date: {movieDetail.release_date}</p>
             <p>Vote Average: {movieDetail.vote_average}</p>
             <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-            <span className="material-symbols-outlined" onClick={() => handleFavoriteClick(movieDetail)}>
+            <span className="material-symbols-outlined" onClick={() => {handleFavoriteClick(movieDetail); handleRed()}} 
+            style={{color: favorite.some((fav) => fav.id === movieDetail.id) ? 'red' : 'inherit'}}>
+                
                 {favorite.some(fav => fav.id === movieDetail.id) ? 'favorite' : 'favorite_border'}
+
             </span>
+    
         </div>
     );
 }

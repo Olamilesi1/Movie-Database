@@ -100,7 +100,7 @@ function MovieSearch() {
             onFavoriteClick={handleFavoriteClick}
             favorite={favorite}
           />
-          <button onClick={handleBackToList}>Back To List</button>
+          <button onClick={handleBackToList} className='back'>Back To List</button>
         </>
       )}
     </div>
