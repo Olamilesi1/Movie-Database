@@ -1,4 +1,4 @@
-.movies {
+/* .movies {
   border: 0.1rem solid black;
   display: flex;
   gap: 1rem;
@@ -6,16 +6,21 @@
 .movie {
   border: 0.1rem solid black;
   border-radius: 1rem;
+} */
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* new css */
 
-/* .title-search {
+ .title-search {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 3rem 0;
-  background-color: #111;
+  /* background-color: #111; */
+  background-color: rgb(0,0,0);
   position: fixed;
   top: 0;
   width: 100%;
@@ -30,8 +35,51 @@
   color: #fff;
 }
 
+.menu-logo{
+  gap: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+.logo{
+  width:30%;
+}
+
 .menu {
   margin-left: 3rem;
+}
+
+.hamburger-menu {
+  display: none;
+  flex-direction: column;
+  background-color: #111;
+  position: absolute;
+  top: 3rem;
+  width: 20%;
+  gap: .65rem; 
+  padding: .5rem 0; 
+  text-align: center;
+  overflow-y: auto;
+  max-height: 90vh;
+}
+
+.hamburger-menu::-webkit-scrollbar {
+  display: none;
+}
+
+.hamburger-menu.open {
+  display: flex;
+}
+
+.menu-item {
+  padding: .3rem;
+  border-bottom: 1px solid #333;
+  color: white;
+  cursor: pointer;
+}
+
+.menu-item:hover {
+  background-color: #333;
 }
 
 .search-setting {
@@ -65,10 +113,10 @@ button {
 button:hover {
   background-color: #f40612;
 }
- */
+ 
 
 /* Movie list and categories */
-/* .movie-genre {
+ .movie-genre {
   padding-top: 8rem;
 }
 
@@ -77,6 +125,7 @@ button:hover {
   justify-content: space-around;
   gap: 1rem;
   overflow: scroll;
+  width: 100%;
   padding-bottom: 1rem;
 }
 
@@ -85,12 +134,12 @@ button:hover {
 }
 
 .movie {
-  width: 50%;
   text-align: center;
   transition: transform 0.2s;
+  padding: 1rem;
 }
 
-.movie-picture {
+.moviepic{
   border-radius: 10px;
 }
 
@@ -100,10 +149,10 @@ button:hover {
 
 .movie:hover {
   transform: scale(1.05);
-} */
+} 
 
 /* Favorite section */
-/* h1 {
+ h1 {
   padding: 20px;
   text-align: center;
 }
@@ -132,10 +181,10 @@ button:hover {
   transition: transform 0.2s;
   margin: 0 auto;
   padding-top: 2rem;
-} */
+} 
 
 /* Media Queries for Responsive Design */
-/* @media (max-width: 1200px) {
+@media (max-width: 1200px) {
 
   .movies, .favorite {
     flex-direction: column;
@@ -157,9 +206,9 @@ button:hover {
     margin: 0 auto;
     padding-top: 2rem;
   }
-} */
+} 
 
-/* @media (max-width: 768px) {
+ @media (max-width: 768px) {
 
   .movie, .favorite-movie {
     width: 90%;
@@ -188,6 +237,16 @@ button:hover {
     margin: 0.2rem 0;
   }
 
+  .search-setting {
+    gap: 2rem;
+    margin-right: 1rem;
+   align-items: center;
+  }
+
+  .menu {
+    margin-left: 1rem;
+  }
+
   .movie, .favorite-movie {
     width: 100%;
   }
@@ -195,4 +254,29 @@ button:hover {
   .movie-genre {
     padding-top: 8rem;
   }
-} */
+
+  .hamburger-menu {
+    width: 35%;
+  }
+} 
+
+@media (max-width: 375px) {
+  .search-setting {
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 320px) {
+  .search-setting {
+    gap: .2rem;
+  }
+
+  input, button {
+    width: 70%;
+  }
+
+  button{
+    display: flex;
+    justify-content: center;
+  }
+}
