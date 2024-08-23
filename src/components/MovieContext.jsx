@@ -19,7 +19,7 @@ const MovieProvider = ({ children }) => {
             .then((response) => response.json())
             .then((data) => setMovies(data.results))
             .catch((error) => console.error("Error fetching movies:", error));
-    }, []);
+    }, [apiUrl]);
 
     useEffect(() => {
         if (searchQuery) {
@@ -28,7 +28,7 @@ const MovieProvider = ({ children }) => {
                 .then((data) => setMovies(data.results))
                 .catch((error) => console.error("Error searching movies:", error));
         }
-    }, [searchQuery]);
+    }, [searchQuery, searchUrl]);
 
     useEffect(() => {
         const storedFavorites = JSON.parse(localStorage.getItem('favorites'));

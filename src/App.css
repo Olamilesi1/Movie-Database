@@ -1,9 +1,50 @@
-.movies {
-  border: 0.1rem solid black;
-  display: flex;
-  gap: 1rem;
+body {
+  font-family: Arial, sans-serif;
 }
-.movie {
-  border: 0.1rem solid black;
-  border-radius: 1rem;
+
+.app {
+  text-align: center;
+  padding: 10px;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.movie-item {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 200px;
+  text-align: center;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.movie-item img {
+  cursor: pointer;
+  width: 100%;
+}
+
+.movie-item img:hover {
+  transition: 0.3s ease-in-out;
+  transform: scale(1.1);
+}
+
+.favourite-item{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.material-symbols-outlined:hover {
+  color: #ff0000;
+}
+
+.movie-detail {
+  width: 50%;
+  height: 75dvh;
+  margin: 0 auto;
+  padding: 10px;
 }

@@ -4,7 +4,8 @@ import MovieSearch from './components/MovieSearch';
 
 function App() {
   return (
-    <div>
+    <div className='app'>
+      <h1>Movie Database</h1>
    <MovieSearch/>
     </div>
   );
